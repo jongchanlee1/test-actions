@@ -10,5 +10,5 @@ jobs:
     steps:
       - name: test
         run: |
-          test=$((${{ github.run_number }} / 4`))
+          test=$((${{ github.run_number }} / 4))
           echo "test"
