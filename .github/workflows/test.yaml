@@ -11,4 +11,4 @@ jobs:
       - name: test
         run: |
           test=$((${{ github.run_number }} / 4))
-          echo "test"
+          echo $test
