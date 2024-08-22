@@ -9,4 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: test
-        run: echo "${{ github.run_number }}"
+        run: |
+          build-checker=`expr ${{ github.run_number }}" / 4`
+          if [[ $build-checker -eq 4 ]];
+          then
+            echo "good"
+            echo $build-checker
+          else
+            echo $build-checker
+          fi
