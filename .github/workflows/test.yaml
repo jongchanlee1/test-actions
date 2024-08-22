@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: test
         run: |
-          build-checker=`expr ${{ github.run_number }} / 4`
+          build-checker=$(`expr ${{ github.run_number }} / 4`)
           if [[ $build-checker -eq 4 ]];
           then
             echo "good"
