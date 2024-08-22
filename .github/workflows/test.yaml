@@ -10,11 +10,5 @@ jobs:
     steps:
       - name: test
         run: |
-          `expr ${{ github.run_number }} / 4`
-          if [[ $build-checker -eq 4 ]];
-          then
-            echo "good"
-            echo $build-checker
-          else
-            echo $build-checker
-          fi
+          test=$(`expr ${{ github.run_number }} / 4`)
+          echo "test"
